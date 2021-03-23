@@ -10,6 +10,7 @@ public class EasterEggRunner {
 
         // rule 30
         boolean[] ruleSet = {false, true, true, true, true, false, false, false};
+
         CellularGenerator cellularGenerator = new CellularGenerator(eggMetrics, ruleSet);
 
         EasterEgg.drawEgg(eggMetrics, cellularGenerator.generate());

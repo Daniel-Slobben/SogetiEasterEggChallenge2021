@@ -13,25 +13,25 @@ public class EasterEgg {
      *
      * @param eggMetrics - Metrics of the Egg
      */
-    static void drawEgg(final EggMetrics eggMetrics, final boolean[][] matrix) {
+    static void drawEgg(final EggMetrics eggMetrics, final Colors[][] matrix) {
         for (int yCoordinate = 0; yCoordinate <= eggMetrics.getFrameHeight(); yCoordinate++) {
             drawSingleEggRow(eggMetrics, yCoordinate, matrix);
             System.out.println();
         }
     }
 
-    private static void drawSingleEggRow(final EggMetrics eggMetrics, final int yCoordinate, final boolean[][] matrix) {
+    private static void drawSingleEggRow(final EggMetrics eggMetrics, final int yCoordinate, final Colors[][] matrix) {
         for (int xCoordinate = 0; xCoordinate <= eggMetrics.getFrameWidth(); xCoordinate++) {
             drawSingleEggPoint(eggMetrics, yCoordinate, xCoordinate, matrix);
         }
     }
 
-    private static void drawSingleEggPoint(final EggMetrics eggMetrics, int yCoordinate, int xCoordinate, final boolean[][] matrix) {
+    private static void drawSingleEggPoint(final EggMetrics eggMetrics, int yCoordinate, int xCoordinate, final Colors[][] matrix) {
         if (isXYPointInsideEgg(eggMetrics, xCoordinate, yCoordinate)) {
-            if (matrix[yCoordinate][xCoordinate]) {
-                System.out.print(Colors.BLACK.getColor());
+            if (matrix[yCoordinate][xCoordinate] == null) {
+                System.out.print(Colors.WHITE.getColor());
             } else {
-                System.out.print(Colors.YELLOW.getColor());
+                System.out.print(matrix[yCoordinate][xCoordinate].getColor());
             }
         } else {
             System.out.print(eggMetrics.getBackgroundColor());
@@ -40,7 +40,7 @@ public class EasterEgg {
 
     private static boolean isXYPointInsideEgg(final EggMetrics eggMetrics, final int xCoordinate, final int yCoordinate) {
         return (((calculateSquareOfDistanceFromCenterXPoint(eggMetrics.getCenterXPoint(), xCoordinate) * EGG_EQUATION_SCALE_FACTOR) / (calculateSquareOfRadius(eggMetrics.getHorizontalRadius()) * factorToChangeToEggShape(yCoordinate))) +
-                ((calculateSquareOfDistanceFromCenterYPoint(eggMetrics.getCenterYPoint(), yCoordinate) * EGG_EQUATION_SCALE_FACTOR) / calculateSquareOfRadius(eggMetrics.getVerticalRadius()))) < EGG_EQUATION_SCALE_FACTOR;
+            ((calculateSquareOfDistanceFromCenterYPoint(eggMetrics.getCenterYPoint(), yCoordinate) * EGG_EQUATION_SCALE_FACTOR) / calculateSquareOfRadius(eggMetrics.getVerticalRadius()))) < EGG_EQUATION_SCALE_FACTOR;
     }
 
     private static int calculateSquareOfDistanceFromCenterXPoint(final int centerXPoint, final int xCoordinate) {
