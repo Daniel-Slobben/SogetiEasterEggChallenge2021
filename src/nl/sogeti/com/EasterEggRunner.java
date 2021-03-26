@@ -6,10 +6,20 @@ import nl.sogeti.logo.SogetiLogoDrawer;
 public class EasterEggRunner {
 
     public static void main(String[] args) {
+
+        int counter = 0;
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                counter++;
+            }
+        }
+        System.out.println("counter: " + counter);
+
         EggMetrics eggMetrics = createEggMetrics();
 
         // rule 30
         boolean[] ruleSet = {false, true, true, true, true, false, false, false};
+
 
         CellularGenerator cellularGenerator = new CellularGenerator(eggMetrics, ruleSet);
 

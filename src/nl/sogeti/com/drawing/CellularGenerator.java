@@ -45,6 +45,9 @@ public class CellularGenerator {
     * @return
     */
    private int booleanArrayToInteger(boolean[] cellValues) {
+
+
+
       StringBuilder binaryCellValues = new StringBuilder();
       for (boolean cellValue: cellValues) {
          if (cellValue) {
@@ -62,10 +65,10 @@ public class CellularGenerator {
     */
    private Colors getColor(int decimal) {
       return switch (decimal) {
-         case 1 -> Colors.YELLOW;
+         case 1 -> Colors.LIGHTPURPLE;
          case 2 -> Colors.PURPLE;
-         case 3 -> Colors.CYAN;
-         case 4 -> Colors.BLUE;
+         case 3 -> Colors.DARKERPURPLE;
+         case 4 -> Colors.DARKESTPURPLE;
          default -> Colors.WHITE;
       };
    }
