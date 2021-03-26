@@ -34,12 +34,17 @@ public enum Colors {
     YELLOW("\033[0;103m \u001b[0m"),
     BLUE("\033[0;104m \u001b[0m"),
     CYAN("\033[0;106m \u001b[0m"),
-    WHITE("\033[0;107m \u001b[0m"),
+    //WHITE("\033[0;107m \u001b[0m"),
     BLACK("\033[0;100m \u001b[0m"),
+
+
 
     LIGHTPURPLE("\033[48;2;139;213;252m \u001b[0m"),
     PURPLE("\033[48;2;91;196;252m \u001b[0m"),
     DARKERPURPLE("\033[48;2;28;176;255m \u001b[0m"),
+    WHITE("\033[48;2;180;212;250m  \u001b[0m"),
+    CURSED("\033[48;2;6;0;177m \u001b[0m"),
+
     DARKESTPURPLE("\033[48;2;0;128;255m \u001b[0m");
 
 

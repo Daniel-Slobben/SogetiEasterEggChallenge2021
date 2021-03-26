@@ -1,5 +1,7 @@
 package nl.sogeti.com;
 
+import java.util.Random;
+
 public class EasterEgg {
 
     private static final float EGG_EQUATION_SCALE_FACTOR = 1000;
@@ -28,11 +30,8 @@ public class EasterEgg {
 
     private static void drawSingleEggPoint(final EggMetrics eggMetrics, int yCoordinate, int xCoordinate, final Colors[][] matrix) {
         if (isXYPointInsideEgg(eggMetrics, xCoordinate, yCoordinate)) {
-            if (matrix[yCoordinate][xCoordinate] == null) {
-                System.out.print(Colors.WHITE.getColor());
-            } else {
-                System.out.print(matrix[yCoordinate][xCoordinate].getColor());
-            }
+            System.out.print(matrix[yCoordinate][xCoordinate].getColor());
+
         } else {
             System.out.print(eggMetrics.getBackgroundColor());
         }
