@@ -33,7 +33,7 @@ public class CellularGenerator {
             if (ruleSet[cellValueInteger]) {
                colorMatrix[i+1][j] = getColor(cellValueInteger);
             } else {
-               colorMatrix[i+1][j] = Colors.CURSED;
+               colorMatrix[i+1][j] = Colors.BACKGROUND;
             }
          }
       }
@@ -65,11 +65,11 @@ public class CellularGenerator {
     */
    private Colors getColor(int decimal) {
       return switch (decimal) {
-         case 1 -> Colors.LIGHTPURPLE;
-         case 2 -> Colors.PURPLE;
-         case 3 -> Colors.DARKERPURPLE;
-         case 4 -> Colors.DARKESTPURPLE;
-         default -> Colors.BLACK;
+         case 1 -> Colors.LIGHTBLUE;
+         case 2 -> Colors.BLUE;
+         case 3 -> Colors.DARKBLUE;
+         case 4 -> Colors.DARKERBLUE;
+         default -> Colors.BACKGROUND;
       };
    }
 

@@ -1,8 +1,6 @@
 package nl.sogeti.com;
 
 
-import static com.diogonunes.jcolor.Attribute.BACK_COLOR;
-
 /**
  * RGB colors can be used as shown below
  * "\u001b[38;2;R;G;Bm█"
@@ -29,24 +27,16 @@ import static com.diogonunes.jcolor.Attribute.BACK_COLOR;
  */
 public enum Colors {
     RED("\033[0;101m \u001b[0m"),
-
     GREEN("\033[0;102m \u001b[0m"),
     YELLOW("\033[0;103m \u001b[0m"),
-    BLUE("\033[0;104m \u001b[0m"),
     CYAN("\033[0;106m \u001b[0m"),
-    //WHITE("\033[0;107m \u001b[0m"),
     BLACK("\033[0;100m \u001b[0m"),
 
-
-
-    LIGHTPURPLE("\033[48;2;139;213;252m \u001b[0m"),
-    PURPLE("\033[48;2;91;196;252m \u001b[0m"),
-    DARKERPURPLE("\033[48;2;28;176;255m \u001b[0m"),
-    WHITE("\033[48;2;180;212;250m  \u001b[0m"),
-    CURSED("\033[48;2;6;0;177m \u001b[0m"),
-
-    DARKESTPURPLE("\033[48;2;0;128;255m \u001b[0m");
-
+    LIGHTBLUE("\033[48;2;139;213;252m \u001b[0m"),
+    BLUE("\033[48;2;91;196;252m \u001b[0m"),
+    DARKBLUE("\033[48;2;28;150;255m \u001b[0m"),
+    DARKERBLUE("\033[48;2;0;70;255m \u001b[0m"),
+    BACKGROUND("\033[48;2;194;251;255m \u001b[0m");
 
     private final String color;
 
