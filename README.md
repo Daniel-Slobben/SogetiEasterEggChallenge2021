@@ -13,7 +13,9 @@
 
 #### Hoera, het is alweer bijna Pasen, tijd om naar paaseitjes te zoeken!
 #### ‘Easter eggs’ zijn een bekend begrip binnen softwareland. De meeste klanten waarderen het niet als je easter eggs in hun productiecode zet, dus hier is je moment! Pak je Java verfpot en je toetsenbord en maak, letterlijk, het allertofste paasei. Gebruik ons template en versier het ei op de meest creatieve manier. Misschien kan je hem zelfs animeren als een flipbook? 
-#### Doe mee met de wedstrijd en wij beoordelen op creativiteit in code en in uiterlijk van het ei. Er is een mooie prijs uit te loven.
+#### Doe mee met de wedstrijd en wij beoordelen op creativiteit in code en in uiterlijk van het ei.
+#### En win deze geweldige prijs:
+![](src/images/easter-egg-prize.png)
 
 </span>
 
@@ -26,6 +28,7 @@
 </span>
 
 #### Het paasei leveren wij, de invulling is aan jou. Wel zijn er enkele regels om rekening mee te houden:
+- Het paasei moet geprint zijn in je console.
 - Het is niet de bedoeling dat het paasei blokje in een println() wordt gemaakt, om deze vervolgens uit te printen. Daarom jureren we alleen paaseieren die genereerd worden op basis van code algoritme.
  Bijvoorbeeld wat niet is toegestaan:
  ```
@@ -164,6 +167,8 @@ private static boolean isaLeftEyeBrow(int yCoordinate, int xCoordinate) {
 #### Hooray, it’s almost Easter again, time to look for Easter eggs!
 #### Easter eggs are a well-known phenomenon in software. Most customers don’t appreciate it if you put some in production code, so here is your moment! Grab your Java paint bucket and your keyboard and create, literally, the most incredible easter egg. Use our starting template and decorate the egg in the most creative way. Maybe you can even make it animate like a flipbook?
 #### Join the contest and we’ll judge on creativity in code and in appearance of the egg. There is a nice prize involved.
+#### And win this amazing prize:
+![](src/images/easter-egg-prize.png)
 
 </span>
 
@@ -178,6 +183,7 @@ private static boolean isaLeftEyeBrow(int yCoordinate, int xCoordinate) {
 </span>
 
 #### We deliver the Easter egg, the completion is up to you. There are some rules to keep in mind:
+- The Easter egg must be printed in your console.
 - It is not the intention that the Easter egg block is made in a println (), and then printed out. That is why we only judge Easter eggs that are generated based on code algorithm.
   For example, what is not allowed:
 
