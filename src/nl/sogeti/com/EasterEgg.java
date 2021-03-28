@@ -1,7 +1,5 @@
 package nl.sogeti.com;
 
-import java.util.Random;
-
 public class EasterEgg {
 
     private static final float EGG_EQUATION_SCALE_FACTOR = 1000;
@@ -31,7 +29,6 @@ public class EasterEgg {
     private static void drawSingleEggPoint(final EggMetrics eggMetrics, int yCoordinate, int xCoordinate, final Colors[][] matrix) {
         if (isXYPointInsideEgg(eggMetrics, xCoordinate, yCoordinate)) {
             System.out.print(matrix[yCoordinate][xCoordinate].getColor());
-
         } else {
             System.out.print(eggMetrics.getBackgroundColor());
         }
@@ -39,7 +36,7 @@ public class EasterEgg {
 
     private static boolean isXYPointInsideEgg(final EggMetrics eggMetrics, final int xCoordinate, final int yCoordinate) {
         return (((calculateSquareOfDistanceFromCenterXPoint(eggMetrics.getCenterXPoint(), xCoordinate) * EGG_EQUATION_SCALE_FACTOR) / (calculateSquareOfRadius(eggMetrics.getHorizontalRadius()) * factorToChangeToEggShape(yCoordinate))) +
-            ((calculateSquareOfDistanceFromCenterYPoint(eggMetrics.getCenterYPoint(), yCoordinate) * EGG_EQUATION_SCALE_FACTOR) / calculateSquareOfRadius(eggMetrics.getVerticalRadius()))) < EGG_EQUATION_SCALE_FACTOR;
+                ((calculateSquareOfDistanceFromCenterYPoint(eggMetrics.getCenterYPoint(), yCoordinate) * EGG_EQUATION_SCALE_FACTOR) / calculateSquareOfRadius(eggMetrics.getVerticalRadius()))) < EGG_EQUATION_SCALE_FACTOR;
     }
 
     private static int calculateSquareOfDistanceFromCenterXPoint(final int centerXPoint, final int xCoordinate) {

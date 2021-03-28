@@ -1,29 +1,16 @@
 package nl.sogeti.com;
 
-import nl.sogeti.com.drawing.CellularGenerator;
 import nl.sogeti.logo.SogetiLogoDrawer;
 
 public class EasterEggRunner {
 
     public static void main(String[] args) {
-
-        int counter = 0;
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                counter++;
-            }
-        }
-        System.out.println("counter: " + counter);
-
         EggMetrics eggMetrics = createEggMetrics();
 
+        CellularGenerator cellularGenerator = new CellularGenerator(eggMetrics);
         // rule 30
         boolean[] ruleSet = {false, true, true, true, true, false, false, false};
-
-
-        CellularGenerator cellularGenerator = new CellularGenerator(eggMetrics, ruleSet);
-
-        EasterEgg.drawEgg(eggMetrics, cellularGenerator.generate());
+        EasterEgg.drawEgg(eggMetrics, cellularGenerator.generate(ruleSet));
 
         // Please don't change the following code:
         new SogetiLogoDrawer().printSogetiLogo();
